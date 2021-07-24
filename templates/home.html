@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Detector</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+<style>
+
+body{
+    background-color: #FAF9F6;
+}
+.btn{
+    text-align: center;
+    background-color: #008CBA ;
+    color:#FAF9F6;
+    border: 2px solid #FAF9F6;
+    padding: 14px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: all 0.2s;
+    font-size: 120%;
+}
+h1{
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+}
+
+</style>
+</head>
+<body>
+
+
+<div align='center'>
+    <br></br>
+    <h1>Welcome to Disease Detector</h1><br></br>
+    <img src="{% static 'new.jpg' %}"  style="width:1100px;height:500px;" text-align="center" vertical-align = "middle">
+</div>
+
+    <section class="pricing py-5">
+        <div class="container">
+          <div class="row">
+            <!-- Free Tier -->
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    HEART DISEASE PREDICTION
+                  </h5>
+
+                  <hr />
+                  <p class="">
+                    Heart disease is one of the biggest cause for morbidity and
+                    mortality among the population of the world. Prediction of
+                    cardiovascular disease is regarded as one of the most
+                    important subject in the section of clinical data analysis.
+                    The amount of data in the healthcare industry is huge. Do regular check ups
+                    maintain a healthy lifestyle .Consult a doctor and let him know about your condition and take care
+                  </p>
+                  <form action="predict2">
+                    <input class="btn " type="submit" value="Heart Detection">
+                </form>
+                </div>
+              </div>
+            </div>
+            <!-- Plus Tier -->
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    DIABETES PREDICTION
+                  </h5>
+
+                  <hr />
+                  <p class="">
+                    Diabetes is considered as one of the deadliest and chronic
+                    diseases which causes an increase in blood sugar. Many
+                    complications occur if diabetes remains untreated and
+                    unidentified. The tedious identifying process results in
+                    visiting of a patient to a diagnostic center and consulting
+                    doctor. But the rise in machine learning approaches solves
+                    this critical problem . Stay Healthy and maintain your health
+                  </p>
+                  <form action="predict">
+                    <input class="btn " type="submit" value="Diabetes Detection">
+                </form>
+
+                </div>
+              </div>
+            </div>
+            <!-- Pro Tier -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    BREAST CANCER PREDICTION
+                  </h5>
+
+                  <hr />
+                  <p class="">
+                    Breast cancer is one of the most common cancers among
+                    women worldwide, representing the majority of new cancer cases
+                    and cancer-related deaths according to global statistics,
+                    making it a significant public health problem in today’s
+                    society . Stay healthy and consult the doctor
+                  </p>
+                  <br></br>
+                  <br></br>
+                  <form action="predict1">
+                    <input class="btn " type="submit" value="Breast Cancer">
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</body>
+
+</html>

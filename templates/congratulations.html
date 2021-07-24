@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Detector</title>
+    <style>
+body{
+    background-color: #FAF9F6;
+    text-align:center;
+}        
+.ans{
+    margin-top : 0px;
+    font-size:30px;
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom :20px;
+}
+
+    </style>
+</head>
+<body>
+    {% if context %}
+    <div class="ans" align="center">
+      You {{ context }}  disease.
+    </div>
+    <br></br>
+    <img src="{% static 'Take_care.jpg' %}"  alt="">
+
+    {% endif %}
+</body>
+</html>

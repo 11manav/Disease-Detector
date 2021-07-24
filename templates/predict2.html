@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disease Detector</title>
+    <meta charset="UTF-8">
+<style>
+      p{
+    font-size: 8px;
+  }
+.predict2{
+	width: 90%;
+	height:100%;
+	margin-bottom: 80px;
+	border: none;
+	outline: none;
+	padding: 30px;
+	font-size: 30px;
+    line-height: 1.6;
+
+}
+h1{
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.btn{
+    text-align: center;
+    color: black;
+    border: 2px solid #008CBA;
+    padding: 14px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+
+}
+input[type=text] {
+  width: 120%;
+  padding: 8px 35px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  margin-left: 60px;
+}
+body{
+    background-color: #FAF9F6;
+}
+</style>
+</head>
+<body>
+        <div class="predict2" align="center">
+        <form action="result2">
+            <h1>Heart Disease Prediction</h1>
+            <img src="{% static 'pred.jpg' %}"  style="width:1300px;height:500px;" text-align="center" vertical-align = "middle">
+
+            <table>
+                <tr>
+                    <td align='left'>1. age  :</td>
+                    <td align="left"><input type="text" name='age' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>2. sex :</td>
+                    <td align="left"><input type="text" name='sex' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>3. cp :</td>
+                    <td align="left"><input type="text" name='cp' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>4. trestbps :</td>
+                    <td align="left"><input type="text" name='trestbps' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>5. chol :</td>
+                    <td align="left"><input type="text" name='chol' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>5. fbs :</td>
+                    <td align="left"><input type="text" name='fbs' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>6. restecg :</td>
+                    <td align="left"><input type="text" name='restecg' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>7. thalach :</td>
+                    <td align="left"><input type="text" name='thalach' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>8. exang :</td>
+                    <td align="left"><input type="text" name='exang' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>9. oldpeak :</td>
+                    <td align="left"><input type="text" name='oldpeak' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>10. slope :</td>
+                    <td align="left"><input type="text" name='slope' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>11. ca:</td>
+                    <td align="left"><input type="text" name='ca' required></td>
+                </tr>
+                 <tr>
+                    <td align='left'>12.thal :</td>
+                    <td align="left"><input type="text" name='thal' required></td>
+                </tr>
+            </table>
+            <input class="btn" type="Submit">
+        </form><br>
+        <p>age - age in years
+            sex - sex (1 = male; 0 = female)
+            cp - chest pain type (1 = typical angina; 2 = atypical angina; 3 = non-anginal pain; 4 = asymptomatic)
+            trestbps - resting blood pressure (in mm Hg on admission to the hospital)
+            chol - serum cholestoral in mg/dl
+            fbs - fasting blood sugar > 120 mg/dl (1 = true; 0 = false)
+            restecg - resting electrocardiographic results (0 = normal; 1 = having ST-T; 2 = hypertrophy)
+            thalach - maximum heart rate achieved
+            exang - exercise induced angina (1 = yes; 0 = no)
+            oldpeak - ST depression induced by exercise relative to rest
+            slope - the slope of the peak exercise ST segment (1 = upsloping; 2 = flat; 3 = downsloping)
+            ca - number of major vessels (0-3) colored by flourosopy
+            thal - 3 = normal; 6 = fixed defect; 7 = reversable defect
+            num - the predicted attribute - diagnosis of heart disease (angiographic disease status) (Value 0 = < 50% diameter narrowing; Value 1 = > 50% diameter narrowing)</p>
+    </div>
+
+</body>
+
+</html>

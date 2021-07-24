@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disease Detector</title>
+    <meta charset="UTF-8">
+
+<style>
+.predict{
+	width: 90%;
+	height:100%;
+	margin-bottom: 5px;
+	border: none;
+	outline: none;
+	padding: 30px;
+	font-size: 30px;
+    line-height: 1.6;
+
+}
+.ans{
+    margin-top : 0px;
+    font-size:30px;
+        text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom : 10px;
+}
+h1{
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.btn{
+    text-align: center;
+    color: black;
+    border: 2px solid #008CBA;
+    padding: 14px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+
+}
+input[type=text] {
+  width: 120%;
+  padding: 8px 35px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  margin-left: 60px;
+}
+body{
+    background-color: #FAF9F6;
+}
+</style>
+</head>
+<body>
+        <div class="predict" align="center">
+        <form action="result">
+            <h1>Diabetes Detection.</h1>
+                <img src="{% static 'pred.jpg' %}" style="width:1300px;height:500px;" text-align="center" vertical-align = "middle">
+
+            <table> <tr>
+                    <td align='left'>1. Pregnancies :</td>
+                    <td align="left"><input type="text" name='n1' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>2. Glucose :</td>
+                    <td align="left"><input type="text" name='n2' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>3. Blood Pressure :</td>
+                    <td align="left"><input type="text" name='n3' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>4. Skin Thickness :</td>
+                    <td align="left"><input type="text" name='n4' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>5. Insulin :</td>
+                    <td align="left"><input type="text" name='n5' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>6. BMI :</td>
+                    <td align="left"><input type="text" name='n6' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>7. Diabetes Pedigree Function :</td>
+                    <td align="left"><input type="text" name='n7' required></td>
+                </tr>
+                <tr>
+                    <td align='left'>8. Age :</td>
+                    <td align="left"><input type="text" name='n8' required></td>
+                </tr>
+            </table>
+            <input class="btn" type="Submit">
+        </form><br>
+    </div>
+
+</body>
+
+</html>

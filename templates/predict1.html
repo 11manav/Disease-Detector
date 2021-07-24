@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Detector</title>
+<style>
+.predict1{
+	width: 80%;
+	height:100%;
+	margin-bottom: 80px;
+	border: none;
+	outline: none;
+	padding: 30px;
+	font-size: 30px;
+    line-height: 1.6;
+
+}
+h1{
+    text-align: center;
+    color: #008CBA;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    padding: 20px;
+	font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    text-align: center;
+    color: black;
+    border: 2px solid #008CBA;
+    padding: 14px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+
+}
+input[type=text] {
+  width: 120%;
+  padding: 8px 35px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  margin-left: 60px;
+}
+body{
+    background-color: #FAF9F6;
+}
+
+</style>
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <div class="predict1" align="center">
+        <img src="{% static 'pred.jpg' %}"  style="width:1300px;height:500px;" text-align="center" vertical-align = "middle">
+
+        <form action="result1">
+
+            <table>
+                <tr>
+                    <td align='left'> mean_radius  </td>
+                    <td align="left"><input type="text" name='mean_radius' required></td>
+                </tr>
+                <tr>
+                    <td align='left'> mean_texture </td>
+                    <td align="left"><input type="text" name='mean_texture' required></td>
+                </tr>
+                <tr>
+                    <td align='left'> mean_perimeter </td>
+                    <td align="left"><input type="text" name='mean_perimeter' required></td>
+                </tr>
+                <tr>
+                    <td align='left'> mean_area </td>
+                    <td align="left"><input type="text" name='mean_area' required></td>
+                </tr>
+                <tr>
+                    <td align='left'> mean_smoothness   </td>
+                    <td align="left"><input type="text" name='mean_smoothness' required></td>
+                </tr>
+            </table>
+            <input class="btn" type="Submit" >
+        </form><br>
+    </div>
+
+</body>
+
+</html>
